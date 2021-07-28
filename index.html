@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+  <title>Bakerlab</title>
+</head>
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="container">
+        <div class="header-menu">
+          <img src="/img/logo.png" alt="logo" class="header-menu__logo">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#bakery" class="nav__link">Bakery</a>
+              </li>
+              <li class="nav__item">
+                <a href="#bakershops" class="nav__link">Bakershops</a>
+              </li>
+              <li class="nav__item">
+                <a href="#about" class="nav__link">About</a>
+              </li>
+              <li class="nav__item">
+                <a href="#contacts" class="nav__link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <h1 class="header__caption">
+          Creative bakery
+        </h1>
+
+        <p class="header__subtitle">
+          We bake your fantasies: croissants cakes, cookies, and cupcakes.
+        </p>
+
+        <div class="button">
+          <a class="button__link" href="#">
+            Learn more
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <div class="bakery">
+          <h2 class="bakery__title" id="bakery">
+            Bakery
+          </h2>
+
+          <section class="cookies block block--position_right" id="cookies">
+            <div class="info">
+
+              <h3 class="info__title">
+                Cookies
+              </h3>
+
+              <h4 class="info__subtitle">
+                Chocolate mix
+              </h4>
+
+              <div class="info__description">
+                <p class="info__description__text">
+                  Oatmeal cookies with golden raisins, orange zest and chocolate chips.
+                </p>
+              </div>
+
+              <div class="info__price">
+                <p class="info__price__text">
+                  $ 4 / 100 g
+                </p>
+              </div>
+            </div>
+
+
+            <div class="arrow">
+            <img src="/img/cookies.jpg" alt="cookies-photo" class="img img__cookies">
+
+                <a href="#cakes" class="arrow__element">
+                  <button class="arrow__page"></button>
+                </a>
+            </div>
+          </section>
+
+          <section class="cakes block block--position_left" id="cakes">
+
+
+            <div class="arrow">
+
+            <img src="/img/cakes.jpg" alt="cakes-photo" class="img img__cakes">
+
+              <a href="#croissants" class="arrow__element">
+                <button class="arrow__page"></button>
+              </a>
+            </div>
+
+            <div class="info">
+              <h3 class="info__title">
+                Cakes
+              </h3>
+
+              <h4 class="info__subtitle">
+                Mint coffee mocca
+              </h4>
+
+              <div class="info__description">
+                <p class="info__description__text">
+                  Chocolate biscuit coffee cake topped with a mint buttercream and powder.
+                </p>
+              </div>
+
+              <div class="info__price">
+                <p class="info__price__text">
+                  $ 5 / 100 g
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+          <section class="croissants block block--position_right" id="croissants">
+            <div class="info">
+
+              <h3 class="info__title">
+                Croissants
+              </h3>
+
+              <h4 class="info__subtitle">
+                Almond classic
+              </h4>
+
+              <div class="info__description">
+                <p class="info__description__text">
+                  Light multi-layered croissant strewn with cinammon and almond “petals”.
+                </p>
+              </div>
+
+              <div class="info__price">
+                <p class="info__price__text">
+                  $ 6.5 / 2
+                </p>
+              </div>
+            </div>
+
+            <div class="arrow">
+            <img src="/img/croissants.jpg" alt="croissants-photo" class="img img__croissants">
+
+              <a href="#cupcakes" class="arrow__element">
+                <button class="arrow__page"></button>
+              </a>
+            </div>
+          </section>
+
+          <section class="cupcakes block block--position_left" id="cupcakes">
+
+            <div class="arrow">
+            <img src="/img/cupkakes.jpg" alt="cakes-photo" class="img img__cakes">
+
+              <a href="#cookies" class="arrow__element">
+                <button class="arrow__page"></button>
+              </a>
+            </div>
+
+            <div class="info">
+              <h3 class="info__title">
+                Cupcakes
+              </h3>
+
+              <h4 class="info__subtitle">
+                Triple creamy
+              </h4>
+
+              <div class="info__description">
+                <p class="info__description__text">
+                  Chocolate salted caramel, Vanilla frutti pebbles and Chocolate chip cupcakes.
+                </p>
+              </div>
+
+              <div class="info__price">
+                <p class="info__price__text">
+                  $ 8 / 3
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+          <div class="button button--range">
+            <a class="button__link" href="#">
+              All bakeries
+            </a>
+          </div>
+        </div>
+      </div>
+
+        <section class="bakershops" id="bakershops">
+          <div class="container">
+            <h2 class="bakershops__title">
+              Bakershops
+            </h2>
+
+            <div class="search-box">
+              <div class="select select--city">
+                <select name="select__list" class="select__list">
+                  <option value="" class="select__name" disabled selected>City</option>
+                  <option value="" class="select__item">Kyiv</option>
+                  <option value="" class="select__item">Lviv</option>
+                  <option value="" class="select__item">Kharkiv</option>
+                  <option value="" class="select__item">Lutsk</option>
+                  <option value="" class="select__item">Vinnytsya</option>
+                  <option value="" class="select__item">Chernihiv</option>
+                  <option value="" class="select__item">Dnipro</option>
+                  <option value="" class="select__item">Chernihiv</option>
+                  <option value="" class="select__item">Zhytomyr</option>
+                  <option value="" class="select__item">Poltava</option>
+                  <option value="" class="select__item">Kherson</option>
+                </select>
+              </div>
+
+              <div class="select select--adress">
+                <select name="select__list"  class="select__list">
+                  <option value="" class="select__name"disabled selected>Adress</option>
+                  <option value="" class="select__item">City</option>
+                  <option value="" class="select__item">Lviv</option>
+                  <option value="" class="select__item">Kharkiv</option>
+                  <option value="" class="select__item">Lutsk</option>
+                  <option value="" class="select__item">Vinnytsya</option>
+                </select>
+              </div>
+
+              <div class="button">
+                <a class="button__link" href="#">
+                  Search
+                </a>
+              </div>
+            </div>
+    
+            <div class="map-ukr" id="map-ukr">
+              <img src="img/map (1) (1).png" alt="map-ukr" class="map-ukr__img">
+            </div>
+          </div>
+        </section>
+
+
+        <section class="about-us" id="about">
+          <div class="container">
+
+            <h2 class="about-us__title">
+              About
+            </h2>
+            <p class="about-us__subtitle">
+              Bakerlab is a bakery network in Ukraine, specialising in creating unique pastry using unconventional recepies. We are commited to delivering the best experience to our clients.
+            </p>
+
+            <div class="facts">
+              <div class="content">
+                <img src="/img/about-im-1.png" alt="" class="content__img">
+              
+                <p class="content__count">
+                  2015
+                </p>
+
+                <div class="content__text">
+                  Foundation year
+                </div>
+              </div>
+
+              <div class="content">
+                <img src="/img/about-im-2.png" alt="" class="content__img">
+              
+                <p class="content__count">
+                  43
+                </p>
+
+                <div class="content__text">
+                  Companies
+                </div>
+              </div>
+
+              <div class="content">
+                <img src="/img/about-im-3.png" alt="" class="content__img">
+
+                <p class="content__count">
+                  155
+                </p>
+
+                <div class="content__text">
+                  Workers
+                </div>
+              </div>
+
+              <div class="content">
+                <img src="/img/about-im-4.png" alt="" class="content__img">
+              
+                <p class="content__count">
+                  85
+                </p>
+
+                <div class="content__text">
+                  Different treats
+                </div>
+              </div>
+
+              <div class="content">
+                <img src="/img/about-im-5.png" alt="" class="content__img">
+              
+                <p class="content__count">
+                  9580
+                </p>
+
+                <div class="content__text">
+                  Happy clients
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contacts-info" id="contacts">
+          <h2 class="contacts-info__title">
+            Contacts
+          </h2>
+
+
+          <div class="location">
+            <div class="contact contacts-info__contact-list">
+
+              <h4 class="contact__title">
+                Get in touch
+              </h4>
+<div class="rex rex-location">
+  
+<div class="img__flex">
+
+  <img src="/img/Vector (1).png" alt="label-icon" class="contact__icon contact__icon--label-size">
+
+  <img src="/img/Vector (2).png" alt="phone-icon" class="contact__icon contact__icon--tel-size">
+
+  <img src="/img/Group (1).png" alt="mail-icon" class="contact__icon contact__icon--mail-size">
+
+</div>
+
+<div class="wrap">
+  <div class="contact__wrapper">
+
+    <p class="contact__name">Bakerlab Head Office</p>
+
+    <p class="contact__way">
+      Ukraine, Kyiv, Holosiivska St, 53
+    </p>
+  </div>
+
+
+  <div class="contact__wrapper">
+
+    <p class="contact__name">
+      Support 24/7
+    </p>
+
+    <p class="contact__way">
+      +38 066 336 36 36
+    </p>
+  </div>
+
+  <div class="contact__wrapper">
+
+    <p class="contact__name">Support</p>
+
+    <p class="contact__way">
+      info@bakerlab.com
+    </p>
+  </div>
+
+  <div class="contact__wrapper">
+    <p class="contact__name">Cooperation</p>
+    <p class="contact__way">
+      max.yovenko@bakerlab.com
+    </p>
+  </div>
+
+  <div class="contact__wrapper contact__wrapper--bottom">
+    <p class="contact__name">PR Manager</p>
+    <p class="contact__way">
+      ihor.lukash@bakerlab.com
+    </p>
+  </div>
+</div>
+
+</div>
+  </div>
+
+  <div class="map-google">
+    <iframe
+      class="map-google__element"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2543.342526099777!2d30.5103708!3d50.3974538!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c8ca8dbd5e13%3A0xb882c535b603865b!2sHolosiivska%20St%2C%2053%2C%20Kyiv%2C%2002000!5e0!3m2!1sen!2sua!4v1625823911578!5m2!1sen!2sua"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+    >
+    </iframe>
+
+            </div>
+          </div>
+
+          <div class="feedback">
+            <div class="container">
+
+            <img
+              src="/img/mail-pic.png"
+              alt="feedback-icon"
+              class="mail-photo"
+            >
+
+            <div class="feedback-form">
+              <h4 class="feedback-form__title">
+                We’d love to hear your feedback
+              </h4>
+
+              <form action="" method="POST" class="form">
+                <input type="name" placeholder="Name*" class="form__field">
+                <input type="email" placeholder="E-mail*" class="form__field">
+                <input type="tel" placeholder="Phone" class="form__field">
+                <input type="text" placeholder="Message*" class="form__field">
+
+                <button class="button form__button">
+                  Send
+                </button>
+              </form>
+
+            </div>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <div class="content">
+            <div class="content__info">
+              <img src="/img/logo (3).png" alt="" class="content__logo" width="112" height="57">
+
+              <div class="content__links">
+                <a href="#bakery">Bakery</a>
+                <a href="#bakershops">Bakershops</a>
+                <a href="#about">About</a>
+                <a href="#contacts">Contacts</a>
+              </div>
+
+              <div class="content__massangers">
+
+                <a href="twitter.com">
+                  <img
+                  src="/img/twitter.png"
+                  width="31"
+                  height="31"
+                  alt="twitter-link"
+                ></a>
+
+                <a href="facebook.com">
+                  <img
+                  src="/img/facebook.png"
+                  width="31"
+                  height="31"
+                  alt="facebook-link"
+                ></a>
+
+                <a href="google.com" target="_blank">
+                  <img
+                  src="/img/linkedin.png"
+                  width="31"
+                  height="31"
+                  alt="instagram-link"
+                ></a>
+  
+              </div>
+            </div>
+
+            <div class="credits">
+              <p class="credits__text">© 2015–2020</p>
+              <p class="credits__text">Privacy — Terms</p>
+            </div>
+
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <a href="google.com">google</a>
+  </div>
+  <script src="/js/javascript.js"></script>
+</body>
+</html>
