@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
   <title>Bakerlab</title>
+  <script src="/js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -16,8 +17,11 @@
     <header class="header">
       <div class="container">
         <div class="header-menu">
-          <img src="/img/logo.png" alt="logo" class="header-menu__logo">
-          <nav class="nav">
+          <img src="/img/logo.png" alt="logo" class="header__logo">
+          <div class="header__burger">
+            <span></span>
+          </div>
+          <nav class="nav__menu">
             <ul class="nav__list">
               <li class="nav__item">
                 <a href="#bakery" class="nav__link">Bakery</a>
@@ -33,6 +37,7 @@
               </li>
             </ul>
           </nav>
+          <div class="header__menu__overlay"></div>
         </div>
 
         <h1 class="header__caption">
@@ -241,7 +246,7 @@
                 </select>
               </div>
 
-              <div class="button">
+              <div class="button button--search">
                 <a class="button__link" href="#">
                   Search
                 </a>
@@ -330,117 +335,112 @@
         </section>
 
         <section class="contacts-info" id="contacts">
-          <h2 class="contacts-info__title">
-            Contacts
-          </h2>
+          <div class="container">
+            <h2 class="contacts-info__title">
+              Contacts
+            </h2>
+
+            <div class="location">
+              <div class="contact contacts-info__contact-list">
+
+                <h4 class="contact-info__title">
+                  Get in touch
+                </h4>
+
+                <div class="rex rex-location">
+                  <div class="img__flex">
+
+                    <img src="/img/Vector (1).png" alt="label-icon" class="contact__icon contact__icon--label-size">
+                    <img src="/img/Vector (2).png" alt="phone-icon" class="contact__icon contact__icon--tel-size">
+                    <img src="/img/Group (1).png" alt="mail-icon" class="contact__icon contact__icon--mail-size">
+                  </div>
+
+                <div class="wrap">
+                  <div class="contact__wrapper">
+
+                    <p class="contact__name">Bakerlab Head Office</p>
+
+                    <p class="contact__way">
+                      Ukraine, Kyiv, Holosiivska St, 53
+                    </p>
+                  </div>
 
 
-          <div class="location">
-            <div class="contact contacts-info__contact-list">
+                  <div class="contact__wrapper">
 
-              <h4 class="contact__title">
-                Get in touch
-              </h4>
-<div class="rex rex-location">
-  
-<div class="img__flex">
+                    <p class="contact__name">
+                      Support 24/7
+                    </p>
 
-  <img src="/img/Vector (1).png" alt="label-icon" class="contact__icon contact__icon--label-size">
+                    <p class="contact__way">
+                      +38 066 336 36 36
+                    </p>
+                  </div>
 
-  <img src="/img/Vector (2).png" alt="phone-icon" class="contact__icon contact__icon--tel-size">
+                  <div class="contact__wrapper">
 
-  <img src="/img/Group (1).png" alt="mail-icon" class="contact__icon contact__icon--mail-size">
+                    <p class="contact__name">Support</p>
 
-</div>
+                    <p class="contact__way">
+                      info@bakerlab.com
+                    </p>
+                  </div>
 
-<div class="wrap">
-  <div class="contact__wrapper">
+                  <div class="contact__wrapper">
+                    <p class="contact__name">Cooperation</p>
+                    <p class="contact__way">
+                      max.yovenko@bakerlab.com
+                    </p>
+                  </div>
 
-    <p class="contact__name">Bakerlab Head Office</p>
+                  <div class="contact__wrapper contact__wrapper--bottom">
+                    <p class="contact__name">PR Manager</p>
+                    <p class="contact__way">
+                      ihor.lukash@bakerlab.com
+                    </p>
+                  </div>
+                </div>
+                </div>
+              </div>
 
-    <p class="contact__way">
-      Ukraine, Kyiv, Holosiivska St, 53
-    </p>
-  </div>
-
-
-  <div class="contact__wrapper">
-
-    <p class="contact__name">
-      Support 24/7
-    </p>
-
-    <p class="contact__way">
-      +38 066 336 36 36
-    </p>
-  </div>
-
-  <div class="contact__wrapper">
-
-    <p class="contact__name">Support</p>
-
-    <p class="contact__way">
-      info@bakerlab.com
-    </p>
-  </div>
-
-  <div class="contact__wrapper">
-    <p class="contact__name">Cooperation</p>
-    <p class="contact__way">
-      max.yovenko@bakerlab.com
-    </p>
-  </div>
-
-  <div class="contact__wrapper contact__wrapper--bottom">
-    <p class="contact__name">PR Manager</p>
-    <p class="contact__way">
-      ihor.lukash@bakerlab.com
-    </p>
-  </div>
-</div>
-
-</div>
-  </div>
-
-  <div class="map-google">
-    <iframe
-      class="map-google__element"
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2543.342526099777!2d30.5103708!3d50.3974538!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c8ca8dbd5e13%3A0xb882c535b603865b!2sHolosiivska%20St%2C%2053%2C%20Kyiv%2C%2002000!5e0!3m2!1sen!2sua!4v1625823911578!5m2!1sen!2sua"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-    >
-    </iframe>
-
+              <div class="map-google">
+                <iframe
+                  class="map-google__element"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.161180743671!2d30.51081931523093!3d50.40083367946851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf34dbc0100f%3A0x7492451f74678712!2z0JPQvtC70L7RgdC10LXQstGB0LrQuNC5INC_0YDQvtGB0L8uLCA1OCwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1627494754716!5m2!1sru!2sua"
+                  width="800"
+                  height="450"
+                  frameborder="0"
+                  style="border:0"
+                  allowfullscreen
+                  loading="lazy"
+                >
+                </iframe>
+              </div>
             </div>
-          </div>
 
-          <div class="feedback">
-            <div class="container">
+            <div class="feedback">
+              <img
+                src="/img/mail-pic.png"
+                alt="feedback-icon"
+                class="mail-photo"
+              >
 
-            <img
-              src="/img/mail-pic.png"
-              alt="feedback-icon"
-              class="mail-photo"
-            >
+              <div class="feedback-form">
+                <h4 class="feedback-form__title">
+                  We’d love to hear your feedback
+                </h4>
 
-            <div class="feedback-form">
-              <h4 class="feedback-form__title">
-                We’d love to hear your feedback
-              </h4>
+                <form action="" method="POST" class="form">
+                  <input type="name" placeholder="Name*" class="form__field">
+                  <input type="email" placeholder="E-mail*" class="form__field">
+                  <input type="tel" placeholder="Phone" class="form__field">
+                  <input type="text" placeholder="Message*" class="form__field">
 
-              <form action="" method="POST" class="form">
-                <input type="name" placeholder="Name*" class="form__field">
-                <input type="email" placeholder="E-mail*" class="form__field">
-                <input type="tel" placeholder="Phone" class="form__field">
-                <input type="text" placeholder="Message*" class="form__field">
-
-                <button class="button form__button">
-                  Send
-                </button>
-              </form>
-
-            </div>
+                  <button class="button form__button">
+                    Send
+                  </button>
+                </form>
+              </div>
           </div>
         </section>
 
@@ -494,8 +494,6 @@
         </footer>
       </div>
     </main>
-
-    <a href="google.com">google</a>
   </div>
   <script src="/js/javascript.js"></script>
 </body>
