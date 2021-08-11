@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  max-width: 1250px;
+  max-width: 1150px;
   margin: 0 auto;
   padding-top: 35px;
 }
@@ -31,11 +31,13 @@ body {
   background-image: url(/img/bake-cup.jpg);
   width: 100%;
   height: 100vh;
-  background-repeat: no-repeat; 
-  background-position: center;
-  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
   margin-left: 0px;
   margin-bottom: 40px;
+  overflow: hidden;
+  transition: 0.5s;
 }
 
 .header-menu {
@@ -43,6 +45,7 @@ body {
   justify-content: space-between;
   margin-bottom: 50px;
   align-items: flex-end;
+  height: 60px;
 }
 
 .header__logo {
@@ -50,43 +53,27 @@ body {
   height: 57px;
 }
 
-.nav__menu {
+.header-menu__nav {
   display: flex;
+  margin-left: auto;
 }
 
-.nav__list {
+.header-menu__list {
   display: flex;
   text-decoration: none;
   list-style: none;
   gap: 34px;
   justify-content: start;
-  align-items: baseline;
-  z-index: 2;
 }
 
 .nav__item {
   display: flex;
 }
 
-.nav__link {
-  font-family: var(--font-family-cookie);
+.header-menu__link {
   text-decoration: none;
   color: var(--dark-brown-color);
-  font-size: 20px;
-}
-
-.header__menu__overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vh;
-  height: 100vh;
-  z-index: 10;
-}
-.active.header__menu__overlay {
-  display: block;
-  background-color: rgb(0, 0, 0, 0.5);
+  font-size: 16px;
 }
 
 .header__caption {
@@ -102,7 +89,7 @@ body {
 .header__subtitle {
   font-size: 26px;
   color: var(--dark-brown-color);
-  width: 420px;
+  max-width: 420px;
   margin-bottom: 25px;
 }
 
@@ -306,7 +293,7 @@ body {
 }
 
 .about-us__subtitle {
-  width: 480px;
+  max-width: 480px;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 60px;
@@ -340,17 +327,21 @@ body {
 }
 
 .map-google {
-  overflow:hidden;
-  padding-bottom:56.25%;
-  position:relative;
-  height:0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  width: 100%;
+  max-height: 480px;
+
 }
+
 .map-google iframe{
-  left:0;
-  top:0;
-  height:100%;
-  width:100%;
-  position:absolute;
+  left: 0;
+  top: 0;
+  position: absolute;
+  min-height: 480px;
+
 }
 
 
@@ -371,7 +362,7 @@ body {
 }
 
 .contact {
-  width: 430px;
+  width: 100%;
   text-align: center;
 }
 
@@ -499,7 +490,7 @@ body {
   justify-content: space-around;
   align-items: center;
   padding-top: 40px;
-  padding-bottom: 15px;
+  padding-bottom: 40px;
 }
 
 .content__links {
@@ -531,13 +522,43 @@ body {
   opacity: 70%;
 }
 
+/* Button-to-top */
+
+.scroll-to-top {
+  display: none;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: var(--cream-color);
+  border-radius: 50%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.fa-angle-up {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: none;
+  padding: 3px;
+  margin: 20px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.fa-angle-up:active {
+  color: none;
+  text-decoration: none;
+}
+
 /* Adaptive */
 
 /* 1200-992 */
 @media screen and (max-width: 1200px) {
   .container {
     width: 960px;
-    transition: ease all .5s;
+    transition: ease all 0.5s;
   }
 
   .header {
@@ -625,87 +646,107 @@ body {
     line-height: 80%;
   }
 
-  .header__burger {
+  .header-menu__button {
     display: block;
-    position: relative;
+    position: fixed;
+    right: 25px;
+    margin-left: auto;
     width: 30px;
     height: 20px;
-    align-items: flex-end;
-    z-index: 3;
+    z-index: 7;
   }
 
-  .header__burger span {
+  /* .header-menu__button.active {} */
+
+  .header-menu__lines {
     position: absolute;
-    background-color: var(--cream-color);
+    background-color: black;
     left: 0;
     width: 100%;
     height: 2px;
     top: 9px;
-    z-index: 2;
-    transition: all 0.3s ease 0s;
+    transition: all 0.4s ease 0s;
   }
 
-  .header__burger.active span {
-    transform: scale(0);
-  }
-
-  .header__burger:before,
-  .header__burger:after {
+  .header-menu__button:before,
+  .header-menu__button:after {
     content: '';
-    background-color: var(--cream-color);
+    background-color: black;
     position: absolute;
     width: 100%;
     height: 2px;
     left: 0;
-    z-index: 2;
-    transition: all 0.3s ease 0s;
   }
 
-  .header__burger:before {
-    top: 0;
-    z-index: 2;
-  }
-  .header__burger:after {
+  .header-menu__button:after {
     bottom: 0;
-    z-index: 2;
+  }
+  .header-menu__button:before {
+    top: 0;
   }
 
-  .header__burger.active:before {
+  .header-menu__button.active:before {
     transform:rotate(45deg);
     top: 9px;
   }
-  .header__burger.active:after {
+  .header-menu__button.active:after {
     transform:rotate(-45deg);
     bottom: 9px;
-    z-index: 3;
+    z-index: 9;
   }
-  .nav__menu {
+
+  .header-menu__button.active .header-menu__lines {
+    transform: scale(0);
+  }
+
+  .header-menu__nav {
+    position: absolute;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: transform 400ms;
+  }
+
+  .header-menu__nav.active {
     position: fixed;
-    /* top: 0; */
-    right: -10%;
-    /* left: 0; */
-    width: 50%;
+    padding: 100px;
+    padding-top: 180px;
     height: 100%;
-    padding-top: 140px;
-    padding-left: 30px;
-    transition: all 0.5s ease 0s;
-    /* background-color: red; */
-    
-    /* transition-timing-function: ease-in; */
-
-  }
-  .nav__menu.active {
-    top: 0;
-    z-index: 2;
-    background-color: var(--light-brown-color);
-  }
-  .nav__menu.active:before {
-    background-color: var(--light-brown-color);
-    /* transition: all 16s ease 0s; */
+    right: 0px;
+    top: 0px;
+    transform: translateX(0);
+    z-index: 6;
   }
 
-  .nav__list {
+  .header-menu__list {
     flex-direction: column;
+    max-width: 250px;
+  }
+
+  .header-menu__overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .back-dark {
+    display: block;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .back {
+    display: none;
+  }
+
+  .color {
+    background-color: var(--light-brown-color);
   }
 
   .location {
@@ -717,26 +758,30 @@ body {
   .map-google {
     height: 500px;
   }
+
   .content__info {
     flex-direction: column;
     align-items: flex-start;
     gap: 60px;
   }
+
   .content__logo {
     margin-left: 16px;
   }
+
   .content__links {
     flex-direction: column;
     gap: 40px;
     align-items: flex-start;
     margin-left: 47px;
   }
+
   .content__massangers {
     display: flex;
     justify-content: space-around;
-    margin-left: 47px;
-    gap: 66px;
+    width: 100%;
   }
+
   .content {
     display: flex;
   }
@@ -761,6 +806,12 @@ body {
   }
   .rex-location {
     gap: 20px;
+  }
+  .bakershops__title {
+    font-size: 80px;
+  }
+  .contacts-info__title {
+    font-size: 80px;
   }
 }
 
