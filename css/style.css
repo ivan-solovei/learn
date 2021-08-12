@@ -19,7 +19,6 @@ body {
   font-family: 'Rubik';
   font-weight: 400;
   color: var(--dark-brown-color);
-  transform: 0.4s;
 }
 
 .container {
@@ -149,25 +148,20 @@ body {
   width: 86px;
 }
 
-.info__price__text {
+.info__price p {
   font-weight: 700;
 }
 
-.img__cookies {
-  max-width: 700px;
-  max-height: 514px;
-}
-
-.arrow {
+.breadcrumbs {
   display: flex;
   align-items: center;
 }
 
-.arrow__element {
+.breadcrumbs__element{
   padding: 13px;
 }
 
-.arrow__page {
+.breadcrumbs__control {
   background-color: #fff;
   border: solid black;
   border-width: 0 3px 3px 0;
@@ -178,17 +172,27 @@ body {
   height: 16px;
 }
 
-.img__cakes {
+.breadcrumbs__img--cookies {
+  max-width: 700px;
+  max-height: 514px;
+}
+
+.breadcrumbs__img--cakes {
   width: 741px;
   height: 482px;
 }
 
-.img__croissants {
+.breadcrumbs__img--croissants {
   width: 662px;
   height: 535px;
 }
 
-.button--range {
+.breadcrumbs__img--cupcakes {
+  width: 741px;
+  height: 482px;
+}
+
+.button--onShops {
   margin: 0 auto;
   margin-top: 168px;
 }
@@ -210,11 +214,11 @@ body {
   gap: 32px;
 }
 
-.select {
+.search-box__select {
   position: relative;
 }
 
-.select__item {
+.search-box__item {
   font-family: 'Rubik';
   font-weight: 500;
   transition: 1.5s;
@@ -222,12 +226,12 @@ body {
   border: 4px;
 }
 
-.select__list {
+.search-box__list {
   border: 3px;
   outline: none;
 }
 
-.select select {
+.search-box__select select {
   display: block;
   width: 173px; /* от ширины блока div */
   padding: .75rem 5.5rem .75rem 1rem;/* отступы от текста до рамки */
@@ -243,7 +247,7 @@ body {
   opacity: 0.5;
 }
 
-.select:after {
+.search-box__select:after {
   content: url(/img/Vector.png);
   display: block;
   border-width: 6px 5px 0 5px;
@@ -307,42 +311,40 @@ body {
   overflow: auto;
 }
 
-.content {
+.facts__content {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.content__img {
+.facts__img {
   margin-bottom: 12px;
 }
 
-.content__count {
+.facts__count {
   margin-bottom: 7px;
   font-weight: 300;
   font-size: 60px;
 }
 
-.content__text {
+.facts__text {
   font-weight: 400;
 }
 
 .map-google {
   overflow: hidden;
-  padding-bottom: 56.25%;
   position: relative;
   height: 0;
   width: 100%;
-  max-height: 480px;
-
+  height: 100%;
 }
 
-.map-google iframe{
+.map-google__element {
   left: 0;
   top: 0;
   position: absolute;
-  min-height: 480px;
-
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -351,9 +353,10 @@ body {
 .location {
   display: flex;
   margin-bottom: 135px;
+  height: 55vh;
 }
 
-.contacts-info{
+.contacts-info {
   margin-top: 135px;
   margin-bottom: 135px;
 }
@@ -485,7 +488,7 @@ body {
   width: 100%;
 }
 
-.content__info {
+.content-info {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -494,25 +497,25 @@ body {
   padding-bottom: 40px;
 }
 
-.content__links {
+.content-info__links {
   display: flex;
   gap: 34px;
 }
 
-.content__links a {
+.content-info__links a {
   color: #fff;
   text-decoration: none;
   font-family: 'Rubik';
 }
 
-.content__massangers {
+.content-info__massangers {
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
 .credits {
   display: flex;
-  margin: 0 auto;
+  justify-content: center;
   gap: 29px;
   padding-bottom: 18px;
 }
@@ -556,7 +559,6 @@ body {
 
 .show {
   display: block;
-
 }
 
 /* Adaptive */
@@ -572,12 +574,12 @@ body {
     width: 100%;
   }
 
-  .map-google__element {
-    width: 500px;
+  .breadcrumbs__img--cakes {
+    width: 650px;
   }
 
-  .img__cakes {
-    width: 650px;
+  .facts {
+    gap: 25px;
   }
 }
 
@@ -593,7 +595,7 @@ body {
     margin-top: 40px;
   }
 
-  .img {
+  .breadcrumbs__img {
     width: 70%;
     height: 70%
   }
@@ -601,16 +603,18 @@ body {
   .info {
     order: -1;
   }
-  .arrow {
+
+  .breadcrumbs{
     display: flex;
     justify-content: space-around;
   }
-  .button--range {
+
+  .button--onShops {
     margin-top: 80px;
   }
 
   .map-google__element{
-    width: 410px;
+    width: 100%;
   }
 
   .info__description {
@@ -645,6 +649,10 @@ body {
   .container {
     width: 540px;
     transition: ease all 0.5s;
+  }
+
+  .location {
+    height: auto;
   }
 
   .header__caption {
@@ -696,6 +704,7 @@ body {
     transform:rotate(45deg);
     top: 9px;
   }
+
   .header-menu__button.active:after {
     transform:rotate(-45deg);
     bottom: 9px;
@@ -755,37 +764,39 @@ body {
   .location {
     display: block;
   }
+
   .contacts-info__contact-list {
     width: 100%;
   }
+
   .map-google {
     height: 500px;
   }
 
-  .content__info {
+  .content-info {
     flex-direction: column;
     align-items: flex-start;
     gap: 60px;
   }
 
-  .content__logo {
+  .content-info__logo {
     margin-left: 16px;
   }
 
-  .content__links {
+  .content-info__links {
     flex-direction: column;
     gap: 40px;
     align-items: flex-start;
     margin-left: 47px;
   }
 
-  .content__massangers {
+  .content-info__massangers {
     display: flex;
     justify-content: space-around;
     width: 100%;
   }
 
-  .content {
+  .content-info {
     display: flex;
   }
 }
@@ -795,24 +806,31 @@ body {
     width: 90%;
     transition: ease all .5s;
   }
+
   .search-box {
     flex-direction: column;
   }
+
   .select select {
     width: 100%;
   }
+
   .button--search {
     margin: 0 auto;
   }
+
   .map-google {
     height: 500px;
   }
+
   .rex-location {
     gap: 20px;
   }
+
   .bakershops__title {
     font-size: 80px;
   }
+
   .contacts-info__title {
     font-size: 80px;
   }
@@ -820,7 +838,7 @@ body {
 }
 
 @media screen and (max-width: 400px) {
-  .mail-photo {
+  .feddback__mail-photo {
     height: 260px;
   }
 }

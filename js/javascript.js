@@ -19,7 +19,7 @@ if ( $(window).width < 768) {
   });
 };
 
-$(".content__links a").click(function() {
+$(".content-info__links a").click(function() {
   var elementClick = $(this).attr("href")
   var destination = $(elementClick).offset().top
   jQuery("html:not(:animated),body:not(:animated)").animate({
@@ -37,7 +37,7 @@ $("a.header-menu__link").click(function() {
   return false;
 });
 
-$(".arrow__element").click(function() {
+$(".breadcrumbs__element").click(function() {
   var elementClick = $(this).attr("href")
   var destination = $(elementClick).offset().top
   jQuery("html:not(:animated),body:not(:animated)").animate({
@@ -55,14 +55,6 @@ $(".button__link").click(function() {
   return false;
 });
 
-$(".button--range").click(function() {
-  var elementClick = $(this).attr("href")
-  var destination = $(elementClick).offset().top
-  jQuery("html:not(:animated),body:not(:animated)").animate({
-    scrollTop: destination
-  }, 1300);
-  return false;
-});
 
 const menuBtn = $('.header-menu__button'),
       menu    = $('.header-menu__nav');
