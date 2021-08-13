@@ -834,7 +834,7 @@ body {
 }
 
 @media screen and (max-width: 400px) {
-  .feddback__mail-photo {
-    height: 220px;
+  .feedback__mail-photo {
+    height: 235px;
   }
 }
