@@ -3,7 +3,6 @@ $('.header-menu__button').click(function (e) {
   $('.header-menu__nav').toggleClass('active');
   $('.header-menu__button').toggleClass('active');
   $('.header-menu__overlay').toggleClass('back-dark');
-  $('.header-menu__nav').toggleClass('color');
   $('body').toggleClass('lock');
 })
 
@@ -11,6 +10,20 @@ $('.header-menu__button').click(function (e) {
       $(".header-menu__nav").animate({
       }, 1500 );
    });
+
+  $('.header-menu__overlay').click(function() {
+  $('.header-menu__nav').removeClass('active');
+  $('.header-menu__button').removeClass('active');
+  $('.header-menu__overlay').removeClass('back-dark');
+  $('body').removeClass('lock');
+})
+
+$('.header-menu__link').click(function() {
+  $('.header-menu__nav').removeClass('active');
+  $('.header-menu__button').removeClass('active');
+  $('.header-menu__overlay').removeClass('back-dark');
+  $('body').removeClass('lock');
+})
 
 if ( $(window).width < 768) {
   $('a.header-menu__link').click(function (e) {
@@ -54,17 +67,6 @@ $(".button__link").click(function() {
   }, 1300);
   return false;
 });
-
-
-const menuBtn = $('.header-menu__button'),
-      menu    = $('.header-menu__nav');
-
-// $(document).click(function (e) {
-//   if ( !menuBtn.is(e.target) && !menu.is(e.target) && menu.has(e.target).length === 0) {
-//       menu.slideUp();
-//       menuBtn.removeClass('is-active');
-//   };
-// });
 
 // Button to Top
 var btn = $('.scroll-to-top');
