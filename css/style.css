@@ -54,6 +54,10 @@ body {
   height: 57px;
 }
 
+.header-menu__nav-mobile {
+  display: none;
+}
+
 .header-menu__nav {
   display: flex;
   margin-left: auto;
@@ -646,6 +650,14 @@ body {
   .container {
     transition: ease all 0.5s;
   }
+
+  .header-menu__nav-desktop {
+    display: none;
+}
+
+  .header-menu__nav-mobile {
+    display: block;
+}
 
   .location {
     height: auto;
