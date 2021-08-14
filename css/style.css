@@ -539,11 +539,19 @@ body {
   margin: 20px;
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
+  position: relative;
 }
 
 .fa-angle-up:active {
   color: none;
   text-decoration: none;
+}
+
+.scroll-to-top__finger-area {
+  padding: 40px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 }
 
 .show {

@@ -70,7 +70,7 @@ $(".button__link").click(function() {
 
 // Button to Top
 var btn = $('.scroll-to-top');
-var btnI = $('.scroll-to-top__fa-angle-up');
+var btnI = $('.scroll-to-top__finger-area');
 
 $(window).scroll(function() {
   if ($(window).scrollTop() > 300) {
