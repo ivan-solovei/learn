@@ -330,8 +330,8 @@ body {
   overflow: hidden;
   position: relative;
   height: 0;
-  width: 100%;
-  height: 100%;
+  width: 62%;
+  height: 507px;
 }
 
 .google-map__element {
@@ -347,7 +347,6 @@ body {
 .location {
   display: flex;
   margin-bottom: 135px;
-  height: 55vh;
 }
 
 .contacts-info {
@@ -361,6 +360,8 @@ body {
 
 .contact {
   width: 100%;
+  width: 430px;
+  height: 507px;
   text-align: center;
 }
 
@@ -770,6 +771,7 @@ body {
 
   .google-map {
     height: 500px;
+    width: 100%;
   }
 
   .content-info {
