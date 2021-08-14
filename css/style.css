@@ -601,7 +601,7 @@ body {
     margin-top: 80px;
   }
 
-  .map-google__element{
+  .google-map__element{
     width: 100%;
   }
 
@@ -760,7 +760,7 @@ body {
     width: 100%;
   }
 
-  .map-google {
+  .google-map {
     height: 500px;
   }
 
@@ -809,7 +809,7 @@ body {
     margin: 0 auto;
   }
 
-  .map-google {
+  .google-map {
     height: 500px;
   }
 
