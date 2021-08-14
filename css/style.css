@@ -720,9 +720,10 @@ body {
     padding-top: 180px;
     height: 100vh;
     transform: translateX(100%);
-    transition: transform 400ms;
+    transition: transform 400ms, opacity 400ms;
     opacity: 0;
     z-index: 6;
+    background-color: var(--light-brown-color);
   }
 
   .header-menu__nav.active {
@@ -735,6 +736,8 @@ body {
     top: 0px;
     transform: translateX(0);
     background-color: var(--light-brown-color);
+    transform: 400ms;
+    transition: transform 400ms, opacity 400ms;
   }
 
   .header-menu__list {
@@ -845,6 +848,6 @@ body {
 
 @media screen and (max-width: 400px) {
   .feedback__mail-photo {
-    height: 235px;
+    height: 245px;
   }
 }
