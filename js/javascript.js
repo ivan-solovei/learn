@@ -122,6 +122,21 @@ goods.forEach(goodName => {
   });
 })
 
+
+const getItemSubTotalPrice = (input) => Number(input.value ) * Number(input.dataset.price);
+const totalPriceWrapper = document.getElementById('total-price-val');
+
+const calculateTotalPrice = () => {
+  let totalCost = 0;
+
+  [...document.querySelectorAll('.shopping-basket__content .counter')].forEach((counter) => {
+      totalCost += getItemSubTotalPrice(counter.querySelector('.input'));
+  });
+
+  totalPriceWrapper.textContent = totalCost;
+};
+
+
 // ON/OFF
 const renderCart = () => {
   const cartElement = document.querySelector('.shopping-basket__content');
@@ -153,6 +168,9 @@ const renderCart = () => {
       );
     });
   });
+
+
+  calculateTotalPrice();
 
 }
 
@@ -234,19 +252,6 @@ goods.forEach(goodName => {
 //     );
 //   };
 // });
-
-const getItemSubTotalPrice = (input) => Number(input.value ) * Number(input.dataset.price);
-const totalPriceWrapper = document.getElementById('total-price-val');
-
-const calculateTotalPrice = () => {
-  let totalCost = 0;
-
-  [...document.querySelectorAll('.shopping-basket__content .counter')].forEach((counter) => {
-      totalCost += getItemSubTotalPrice(counter.querySelector('.input'));
-  });
-
-  totalPriceWrapper.textContent = totalCost;
-};
 
 const shoppingBasketMenu = document.querySelector('.shopping-basket-menu'); 
 
