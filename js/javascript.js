@@ -151,24 +151,24 @@ goods.forEach(goodName => {
 
 // Basket Counter
 
-const shoppingBasketMenu = document.querySelector('shopping-basket-menu');
-
-const ACTION = {
-  PLUS: 'plus',
-  MINUS: 'minus'
-};
-
 const getItemSubTotalPrice = (input) => Number(input.value ) * Number(input.dataset.price);
+const totalPriceWrapper = document.getElementById('total-price-val');
 
 const init = () => {
   let totalCost = 0;
-  const totalPriceWrapper = document.getElementById('total-price-val');
 
   [...document.querySelectorAll('.counter')].forEach((counter) => {
       totalCost += getItemSubTotalPrice(counter.querySelector('.input'));
   });
 
   totalPriceWrapper.textContent = totalCost;
+};
+
+const shoppingBasketMenu = document.querySelector('shopping-basket-menu');
+
+const ACTION = {
+  PLUS: 'plus',
+  MINUS: 'minus'
 };
 
 const CalculateSaeparateItem = (shoppingBasketMenu, action) => {
@@ -186,7 +186,7 @@ const CalculateSaeparateItem = (shoppingBasketMenu, action) => {
   document.querySelector('total-price-val').textContent = getItemSubTotalPrice(input);
 };
 
-document.getElementById('counter').addEventListener('click', (event) => {
+document.querySelector('#counter').addEventListener('click', (event) => {
   if (event.target.classList.contains('counter__minus-btn')) {
     CalculateSaeparateItem(
       event.target.closest('.counter'),
@@ -195,12 +195,34 @@ document.getElementById('counter').addEventListener('click', (event) => {
   }
 
   if (event.target.classList.contains('counter__plus-btn')) {
-    CalculateSaeparateItem(
-      event.target.closest('.counter'),
-      ACTION.PLUS
-    );
+    console.log('plus')
+    // CalculateSaeparateItem(
+    //   event.target.closest('.counter'),
+    //   ACTION.PLUS
+    // );
   }
 });
 
 
 init();
+
+
+// const init = () => {
+//   let totalCost = 0;
+//   const rex = document.querySelector('.shopping-basket__menu');
+//   const as = document.querySelector('.block');
+
+
+// if (rex.contains(as)) {
+//     [...document.querySelectorAll('.counter__box-wrap')].forEach((cookies) => {
+//       totalCost += Number(cookies.querySelector('.input').value) * Number(cookies.querySelector('.input').dataset.price);
+//     });
+//     document.getElementById('total-price-val').textContent = totalCost;
+
+// }
+
+// console.log(init())
+
+// };
+
+// init();

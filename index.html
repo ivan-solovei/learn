@@ -96,7 +96,7 @@
 
         <div class="shopping-basket__footer">
           <div class="counter__total-price">total:
-            <span id="total-price-val" class="total-price-val"></span>
+            <span id="total-price-val" class="total-price-val">0</span>
             <p>$</p>
           </div>
           <button class="shopping-basket__to-buy-button">
@@ -133,27 +133,27 @@
               <div class="info__purchase">
                 <div class="info__price">
                   <p>
-                    $ <span class="subtotal">4</span> / 100 g
+                    $ <span class="subtotal" id="subtotal" value="4">4</span> / 100 g
                   </p>
                 </div>
                 <img src="img/basket.svg" class="info__icon info__icon--add-to-basket info__icon--cookies" alt="basket-icon">
                 <img src="img/check.svg" alt="check-icon" class="info__icon-check">
               </div>
-            <div class="info__wrapper-for-counter info__wrapper-for-counter--before-adaptive">
-              <div class="info__counter counter" id="counter">
-                <button class="counter__minus-btn" id="buttonCountMinus">
-                  <img src="img/minus-icon.svg" class="counter__minus-icon">
-                </button>
+              <div class="wrapper-for-counter wrapper-for-counter--before-adaptive">
+                <div class="info__counter counter" id="counter">
+                  <button class="counter__minus-btn" id="buttonCountMinus">
+                    <img src="img/minus-icon.svg" class="counter__minus-icon">
+                  </button>
 
-                <div class="counter__box-wrap">
-                  <input class="counter__calc input" value="1" data-price="0" disabled></input>
+                  <div class="counter__box-wrap">
+                    <input class="counter__calc input" value="1" data-price="4" disabled></input>
+                  </div>
+
+                  <button class="counter__plus-btn" id="buttonCountPlus">
+                    <img src="img/plus-icon.svg" alt="plus-icon" class="counter__plus-icon">
+                  </button>
                 </div>
-  
-                <button class="counter__plus-btn" id="buttonCountPlus">
-                  <img src="img/plus-icon.svg" alt="plus-icon" class="counter__plus-icon">
-                </button>
               </div>
-            </div>
             </div>
 
             <div class="breadcrumbs">
@@ -163,14 +163,14 @@
               </a>
             </div>
 
-            <div class="info__wrapper-for-counter info__wrapper-for-counter--after-adaptive">
+            <div class="wrapper-for-counter wrapper-for-counter--after-adaptive">
               <div class="info__counter counter" id="counter">
                 <button class="counter__minus-btn" id="buttonCountMinus">
                   <img src="img/minus-icon.svg" class="counter__minus-icon">
                 </button>
 
                 <div class="counter__box-wrap">
-                  <input class="counter__calc input" value="1" data-price="0" disabled></input>
+                  <input class="counter__calc input" value="1" data-price="4" disabled></input>
                 </div>
   
                 <button class="counter__plus-btn" id="buttonCountPlus">
@@ -180,7 +180,7 @@
             </div>
           </section>
 
-          <section class="cakes block block--position_left" id="cakes">
+          <section class="cakes block block--position-left" id="cakes">
 
             <div class="breadcrumbs">
               <img src="img/cakes.svg" alt="cakes-photo" class="breadcrumbs__img breadcrumbs__img--cakes">
@@ -188,18 +188,18 @@
                 <button class="breadcrumbs__control"></button>
               </a>
             </div>
-            <div class="info__wrapper-for-counter">
+            <div class="wrapper-for-counter wrapper-for-counter--after-adaptive">
               <div class="info__counter counter" id="counter">
                 <button class="counter__minus-btn" id="buttonCountMinus">
                   <img src="img/minus-icon.svg" class="counter__minus-icon" >
                 </button>
 
                 <div class="counter__box-wrap">
-                  <input class="counter__calc input" value="1" data-price="0" disabled></input>
+                  <input class="counter__calc input" value="1" data-price="5" disabled></input>
                 </div>
 
                 <button class="counter__plus-btn" id="buttonCountPlus">
-                  <img src="img/plus-icon.svg" class="counter__plus-icon" >
+                  <img src="img/plus-icon.svg" class="counter__plus-icon">
                 </button>
               </div>
             </div>
@@ -218,14 +218,31 @@
                 </p>
               </div>
 
-            <div class="info__purchase">
-              <div class="info__price">
-                <p>
-                  $ 5 / 100 g
-                </p>
+              <div class="info__purchase">
+                <div class="info__price">
+                  <p>
+                    $ 5 / 100 g
+                  </p>
+                </div>
+                <img src="img/basket.svg " alt="basket-icon" class="info__icon info__icon--add-to-basket info__icon--cakes">
+                <img src="img/check.svg" alt="check-icon" class="info__icon-check">
               </div>
-              <img src="img/basket.svg " alt="basket-icon" class="info__icon info__icon--add-to-basket info__icon--cakes">
-              <img src="img/check.svg" alt="check-icon" class="info__icon-check">
+
+              <div class="wrapper-for-counter wrapper-for-counter--before-adaptive">
+                <div class="info__counter counter" id="counter">
+                  <button class="counter__minus-btn" id="buttonCountMinus">
+                    <img src="img/minus-icon.svg" class="counter__minus-icon" >
+                  </button>
+
+                  <div class="counter__box-wrap">
+                    <input class="counter__calc input" value="1" data-price="5" disabled></input>
+                  </div>
+
+                  <button class="counter__plus-btn" id="buttonCountPlus">
+                    <img src="img/plus-icon.svg" class="counter__plus-icon">
+                  </button>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -246,7 +263,6 @@
                 </p>
               </div>
 
-
               <div class="info__purchase">
                 <div class="info__price">
                   <p>
@@ -255,6 +271,22 @@
                 </div>
                 <img src="img/basket.svg" alt="basket-icon" class="info__icon info__icon--add-to-basket info__icon--croissants">
                 <img src="img/check.svg" alt="check-icon" class="info__icon-check">
+              </div>
+
+              <div class="wrapper-for-counter wrapper-for-counter--before-adaptive">
+                <div class="info__counter counter" id="counter">
+                  <button class="counter__minus-btn" id="buttonCountMinus">
+                    <img src="img/minus-icon.svg" alt="minus-icon" class="counter__minus-icon">
+                  </button>
+  
+                  <div class="counter__box-wrap">
+                    <input class="counter__calc input" value="2" data-price="6.5" disabled></input>
+                  </div>
+  
+                  <button class="counter__plus-btn" id="buttonCountPlus">
+                    <img src="img/plus-icon.svg" alt="plus-icon" class="counter__plus-icon">
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -266,14 +298,14 @@
               </a>
             </div>
 
-            <div class="info__wrapper-for-counter">
+            <div class="wrapper-for-counter wrapper-for-counter--after-adaptive">
               <div class="info__counter counter" id="counter">
                 <button class="counter__minus-btn" id="buttonCountMinus">
                   <img src="img/minus-icon.svg" alt="minus-icon" class="counter__minus-icon">
                 </button>
 
                 <div class="counter__box-wrap">
-                  <input class="counter__calc input" value="1" data-price="0" disabled></input>
+                  <input class="counter__calc input" value="2" data-price="6.5" disabled></input>
                 </div>
 
                 <button class="counter__plus-btn" id="buttonCountPlus">
@@ -283,7 +315,7 @@
             </div>
           </section>
 
-          <section class="cupcakes block block--position_left" id="cupcakes">
+          <section class="cupcakes block block--position-left" id="cupcakes">
 
             <div class="breadcrumbs">
             <img src="img/cupcakes.svg" alt="cakes-photo" class="breadcrumbs__img breadcrumbs__img--cupcakes">
@@ -317,18 +349,33 @@
                 <img src="img/basket.svg" alt="basket-icon" class="info__icon info__icon--add-to-basket info__icon--cupcakes">
                 <img src="img/check.svg" alt="check-icon" class="info__icon-check">
               </div>
-            </div>
 
-            <div class="info__wrapper-for-counter">
+              <div class="wrapper-for-counter wrapper-for-counter--before-adaptive">
+                <div class="info__counter counter" id="counter">
+                  <button class="counter__minus-btn" id="buttonCountMinus">
+                    <img src="img/minus-icon.svg" alt="minus-icon" class="counter__minus-icon">
+                  </button>
+  
+                  <div class="counter__box-wrap">
+                    <input class="counter__calc input" value="3" data-price="8" disabled></input>
+                  </div>
+
+                  <button class="counter__plus-btn" id="buttonCountPlus">
+                    <img src="img/plus-icon.svg" alt="plus-icon" class="counter__plus-icon">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper-for-counter wrapper-for-counter--after-adaptive">
               <div class="info__counter counter" id="counter">
                 <button class="counter__minus-btn" id="buttonCountMinus">
                   <img src="img/minus-icon.svg" alt="minus-icon" class="counter__minus-icon">
                 </button>
-  
+
                 <div class="counter__box-wrap">
-                  <input class="counter__calc input" value="1" data-price="0" disabled></input>
+                  <input class="counter__calc input" value="3" data-price="8" disabled></input>
                 </div>
-  
+
                 <button class="counter__plus-btn" id="buttonCountPlus">
                   <img src="img/plus-icon.svg" alt="plus-icon" class="counter__plus-icon">
                 </button>
