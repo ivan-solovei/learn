@@ -132,9 +132,31 @@ const renderCart = () => {
     const good = document.querySelector(className);
     cartElement.appendChild(good.cloneNode(true));
   });
+
+  [...document.querySelectorAll('.info__counter')].forEach((counter) => {
+    const minusBtn = counter.querySelector('.counter__minus-btn');
+    const plusBtn = counter.querySelector('.counter__plus-btn');
+
+    console.log(minusBtn);
+
+    minusBtn.addEventListener('click', () => {
+      CalculateSaeparateItem(
+      counter,
+      ACTION.MINUS
+      );
+    });
+
+    plusBtn.addEventListener('click', () => {
+      CalculateSaeparateItem(
+      counter,
+      ACTION.PLUS
+      );
+    });
+  });
+
 }
 
-// Into basket
+// add on click handlers for basket-buttons
 goods.forEach(goodName => {
   $(`.info__icon--${goodName}`).click(function () {
     const goodClass = '.' + goodName;
@@ -151,27 +173,89 @@ goods.forEach(goodName => {
 
 // Basket Counter
 
+// const getItemSubTotalPrice = (input) => Number(input.value ) * Number(input.dataset.price);
+// const totalPriceWrapper = document.getElementById('total-price-val');
+
+// const init = () => {
+//   let totalCost = 0;
+
+//   [...document.querySelectorAll('.shopping-basket__content .counter')].forEach((counter) => {
+//       totalCost += getItemSubTotalPrice(counter.querySelector('.input'));
+//   });
+
+//   totalPriceWrapper.textContent = totalCost;
+// };
+
+// const shoppingBasketMenu = document.querySelector('shopping-basket-menu');
+
+// const ACTION = {
+//   PLUS: 'plus',
+//   MINUS: 'minus'
+// };
+
+// const CalculateSaeparateItem = (counter, action) => {
+//   const input = counter.querySelector('.input');
+
+//   switch (action) {
+//     case ACTION.PLUS:
+//         input.value++;
+//           break;
+//     case ACTION.MINUS:
+//         input.value--;
+//           break;
+//   }
+
+//   document.querySelector('.total-price-val').textContent = getItemSubTotalPrice(input);
+// };
+
+// [...document.querySelectorAll('.info__counter')].forEach((counter) => {
+//   const minusBtn = counter.querySelector('.counter__minus-btn');
+//   const plusBtn = counter.querySelector('.counter__plus-btn');
+
+//   console.log(minusBtn) 
+
+
+//   $(minusBtn).click(function() {
+//     console.log('minus btn clicked')
+//   });
+
+//   minusBtn.addEventListener('click', () => {
+//     console.log('minus btn clicked')
+//     CalculateSaeparateItem(
+//       counter,
+//       ACTION.MINUS
+//     );
+//   }, true);
+
+//   plusBtn.onclick = () => {
+//     CalculateSaeparateItem(
+//       counter,
+//       ACTION.PLUS
+//     );
+//   };
+// });
+
 const getItemSubTotalPrice = (input) => Number(input.value ) * Number(input.dataset.price);
 const totalPriceWrapper = document.getElementById('total-price-val');
 
-const init = () => {
+const calculateTotalPrice = () => {
   let totalCost = 0;
 
-  [...document.querySelectorAll('.counter')].forEach((counter) => {
+  [...document.querySelectorAll('.shopping-basket__content .counter')].forEach((counter) => {
       totalCost += getItemSubTotalPrice(counter.querySelector('.input'));
   });
 
   totalPriceWrapper.textContent = totalCost;
 };
 
-const shoppingBasketMenu = document.querySelector('shopping-basket-menu');
+const shoppingBasketMenu = document.querySelector('.shopping-basket-menu'); 
 
 const ACTION = {
   PLUS: 'plus',
   MINUS: 'minus'
 };
 
-const CalculateSaeparateItem = (shoppingBasketMenu, action) => {
+const CalculateSaeparateItem = (counter, action) => {
   const input = counter.querySelector('.input');
 
   switch (action) {
@@ -183,46 +267,8 @@ const CalculateSaeparateItem = (shoppingBasketMenu, action) => {
           break;
   }
 
-  document.querySelector('total-price-val').textContent = getItemSubTotalPrice(input);
+  document.querySelector('.total-price-val').textContent = getItemSubTotalPrice(input);
 };
 
-document.querySelector('#counter').addEventListener('click', (event) => {
-  if (event.target.classList.contains('counter__minus-btn')) {
-    CalculateSaeparateItem(
-      event.target.closest('.counter'),
-      ACTION.MINUS
-    );
-  }
 
-  if (event.target.classList.contains('counter__plus-btn')) {
-    console.log('plus')
-    // CalculateSaeparateItem(
-    //   event.target.closest('.counter'),
-    //   ACTION.PLUS
-    // );
-  }
-});
-
-
-init();
-
-
-// const init = () => {
-//   let totalCost = 0;
-//   const rex = document.querySelector('.shopping-basket__menu');
-//   const as = document.querySelector('.block');
-
-
-// if (rex.contains(as)) {
-//     [...document.querySelectorAll('.counter__box-wrap')].forEach((cookies) => {
-//       totalCost += Number(cookies.querySelector('.input').value) * Number(cookies.querySelector('.input').dataset.price);
-//     });
-//     document.getElementById('total-price-val').textContent = totalCost;
-
-// }
-
-// console.log(init())
-
-// };
-
-// init();
+  calculateTotalPrice();
