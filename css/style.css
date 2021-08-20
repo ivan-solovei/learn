@@ -173,11 +173,10 @@ button {
 
 .empty-page__inf{
   left: 0;
-  line-height: 200px;
-  margin-top: -100px;
+  margin-top: -90px;
   position: absolute;
   text-align: center;
-  top: 50%;
+  top: 60%;
   width: 100%;
 }
 
@@ -219,7 +218,7 @@ button {
 .shopping-basket__footer {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: inherit;
   position: absolute;
   width: 100%;
   bottom: 0px;
@@ -278,6 +277,7 @@ button {
 .shopping-basket__to-buy-button {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .shopping-basket__button-buy {
