@@ -100,7 +100,6 @@ button {
   color: var(--light-brown-color);
 }
 
-
 .header-menu__nav-desktop .header-menu__list {
   position: relative;
   padding-right: 30px;
@@ -119,7 +118,6 @@ button {
   cursor: pointer;
 }
 
-
 .header-menu__basket-img:hover {
   color: var(--light-brown-color);
   transform: scale(1.4);
@@ -131,6 +129,7 @@ button {
   left: 50%;
   top: 50%;
   width: 90%;
+  height: 90%;
   transform: translate(-50%, -50%);
   padding: 40px;
   background-color: rgb(248, 248, 248);
@@ -159,10 +158,25 @@ button {
   margin-right: 40px;
 }
 
+
+.shopping-basket__content::-webkit-scrollbar {
+  width: 0;
+}
+
 .shopping-basket__content {
   height: 62vh;
-  overflow: scroll;
-  overflow-x: hidden;
+  overflow: auto;
+}
+
+.empty-page__inf{
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.empty-page__text{
+  font-weight: 600;
+  font-size: 24px;
 }
 
 .shopping-basket__content .block {
@@ -185,15 +199,6 @@ button {
   width: 65%;
 }
 
-.wrapper-for-counter--before-adaptive .counter{
-  justify-content: flex-start;
-  margin-top: 40px;
-}
-
-.wrapper-for-counter--after-adaptive {
-  display: none;
-}
-
 .shopping-basket__content .block .breadcrumbs {
   display: block;
   background-color: inherit;
@@ -209,7 +214,6 @@ button {
   justify-content: center;
   position: relative;
   gap: 20px;
-  margin-top: 25px;
 }
 
 .counter__content {
@@ -224,10 +228,6 @@ button {
 .counter__calc {
   width: 40px;
   text-align: center;
-}
-
-.counter__minus-btn {
-  padding: 50px;
 }
 
 .counter__minus-icon,
@@ -260,7 +260,12 @@ button {
   right: 90px;
 }
 
-.shopping-basket__icon-button {
+.shopping-basket__to-buy-button {
+  display: flex;
+  justify-content: center;
+}
+
+.shopping-basket__button-buy {
   border: 0px solid;
   background-color: var(--light-brown-color);
   padding: 15px 100px;
@@ -269,6 +274,7 @@ button {
   display: flex;
   justify-content: center;
   color: #fff;
+  max-width: 150px;
 }
 
 .btn {
@@ -279,6 +285,7 @@ button {
   width: 30px;
   height: 20px;
   z-index: 7;
+  cursor: pointer;
 }
 
 .btn:before,
@@ -918,14 +925,6 @@ body.lock {
     justify-content: space-around;
   }
 
-  .wrapper-for-counter--before-adaptive {
-    display: none;
-  }
-
-  .wrapper-for-counter--after-adaptive {
-    display: block;
-  }
-
   .button-onShops {
     margin-top: 80px;
   }
@@ -979,6 +978,7 @@ body.lock {
     width: 30px;
     height: 30px;
     z-index: 1;
+    cursor: pointer;
   }
 
   .location {
@@ -999,7 +999,8 @@ body.lock {
     margin-left: auto;
     width: 30px;
     height: 20px;
-    z-index: 7;
+    z-index: 11;
+    cursor: pointer;
   }
 
   .header-menu__lines {
@@ -1067,7 +1068,7 @@ body.lock {
     transform: translateX(100%);
     transition: transform 400ms, opacity 400ms;
     opacity: 0;
-    z-index: 6;
+    z-index: 10;
     background-color: var(--light-brown-color);
   }
 
@@ -1083,6 +1084,10 @@ body.lock {
     background-color: var(--light-brown-color);
     transform: 400ms;
     transition: transform 400ms, opacity 400ms;
+  }
+
+  .header-menu__nav a:hover {
+    color: #fff;
   }
 
   .header-menu__list {
@@ -1188,7 +1193,7 @@ body.lock {
 
   .shopping-basket__content {
     height: 63vh;
-    overflow: scroll;
+    overflow: auto;
   }
 
   .shopping-basket__content .info__price {

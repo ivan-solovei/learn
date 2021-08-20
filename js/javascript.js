@@ -152,8 +152,6 @@ const renderCart = () => {
     const minusBtn = counter.querySelector('.counter__minus-btn');
     const plusBtn = counter.querySelector('.counter__plus-btn');
 
-    console.log(minusBtn);
-
     minusBtn.addEventListener('click', () => {
       CalculateSaeparateItem(
       counter,
@@ -191,67 +189,6 @@ goods.forEach(goodName => {
 
 // Basket Counter
 
-// const getItemSubTotalPrice = (input) => Number(input.value ) * Number(input.dataset.price);
-// const totalPriceWrapper = document.getElementById('total-price-val');
-
-// const init = () => {
-//   let totalCost = 0;
-
-//   [...document.querySelectorAll('.shopping-basket__content .counter')].forEach((counter) => {
-//       totalCost += getItemSubTotalPrice(counter.querySelector('.input'));
-//   });
-
-//   totalPriceWrapper.textContent = totalCost;
-// };
-
-// const shoppingBasketMenu = document.querySelector('shopping-basket-menu');
-
-// const ACTION = {
-//   PLUS: 'plus',
-//   MINUS: 'minus'
-// };
-
-// const CalculateSaeparateItem = (counter, action) => {
-//   const input = counter.querySelector('.input');
-
-//   switch (action) {
-//     case ACTION.PLUS:
-//         input.value++;
-//           break;
-//     case ACTION.MINUS:
-//         input.value--;
-//           break;
-//   }
-
-//   document.querySelector('.total-price-val').textContent = getItemSubTotalPrice(input);
-// };
-
-// [...document.querySelectorAll('.info__counter')].forEach((counter) => {
-//   const minusBtn = counter.querySelector('.counter__minus-btn');
-//   const plusBtn = counter.querySelector('.counter__plus-btn');
-
-//   console.log(minusBtn) 
-
-
-//   $(minusBtn).click(function() {
-//     console.log('minus btn clicked')
-//   });
-
-//   minusBtn.addEventListener('click', () => {
-//     console.log('minus btn clicked')
-//     CalculateSaeparateItem(
-//       counter,
-//       ACTION.MINUS
-//     );
-//   }, true);
-
-//   plusBtn.onclick = () => {
-//     CalculateSaeparateItem(
-//       counter,
-//       ACTION.PLUS
-//     );
-//   };
-// });
 
 const shoppingBasketMenu = document.querySelector('.shopping-basket-menu'); 
 
