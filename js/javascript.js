@@ -1,7 +1,6 @@
 const cart = [];
 const goods = ['cakes', 'cookies', 'croissants', 'cupcakes'];
 
-
 $('.header-menu__button').click(function (e) {
   e.preventDefault();
   $('.header-menu__nav').toggleClass('active');
@@ -118,16 +117,15 @@ $('.shopping-basket__button').click(function() {
 // Click on info__icon
 goods.forEach(goodName => {
   $(`.info__icon--${goodName}`).click(function() {
-    $(`.info__icon--${goodName} + .info__icon-check `).toggleClass('show');
+    $(`.info__icon--${goodName} + .info__icon-check `).toggleClass('showme');
   });
 })
 
-
 const getItemSubTotalPrice = (input) => Number(input.value ) * Number(input.dataset.price);
 const totalPriceWrapper = document.getElementById('total-price-val');
-
 const calculateTotalPrice = () => {
-  let totalCost = 0;
+
+let totalCost = 0;
 
   [...document.querySelectorAll('.shopping-basket__content .counter')].forEach((counter) => {
       totalCost += getItemSubTotalPrice(counter.querySelector('.input'));
@@ -167,9 +165,7 @@ const renderCart = () => {
     });
   });
 
-
   calculateTotalPrice();
-
 }
 
 // add on click handlers for basket-buttons
@@ -188,8 +184,6 @@ goods.forEach(goodName => {
 });
 
 // Basket Counter
-
-
 const shoppingBasketMenu = document.querySelector('.shopping-basket-menu'); 
 
 const ACTION = {
@@ -199,6 +193,7 @@ const ACTION = {
 
 const CalculateSaeparateItem = (counter, action) => {
   const input = counter.querySelector('.input');
+  const minValue = input.getAttribute("min");
 
   switch (action) {
     case ACTION.PLUS:
@@ -211,6 +206,5 @@ const CalculateSaeparateItem = (counter, action) => {
 
   document.querySelector('.total-price-val').textContent = getItemSubTotalPrice(input);
 };
-
 
   calculateTotalPrice();
