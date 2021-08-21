@@ -87,7 +87,7 @@ $(window).scroll(function() {
 
 btnI.on('click', function(e) {
   e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '9990');
+  $('html, body').animate({scrollTop:0}, '0.9');
 });
 
 // Shopping Basket

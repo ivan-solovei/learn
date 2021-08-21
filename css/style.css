@@ -166,9 +166,9 @@ button {
 }
 
 .shopping-basket__content {
-  height: 62vh;
+  height: 41vh;
   overflow: auto;
-  bottom: 0px;
+  padding-bottom: 100px;
 }
 
 .empty-page__inf{
@@ -850,7 +850,6 @@ button {
 .scroll-to-top:hover {
   border: none;
   transform: scale(1.3);
-  opacity: 0.9;
 }
 
 .scroll-to-top:active {
@@ -1229,8 +1228,9 @@ button {
   }
 
   .shopping-basket__content {
-    height: 63vh;
+    height: 50vh;
     overflow: auto;
+    padding-bottom: 100px;
   }
 
   .shopping-basket__content .info__price {
@@ -1254,7 +1254,7 @@ button {
   }
 }
 
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 450px) {
   .counter__total-price{
     padding: 0;
   }
