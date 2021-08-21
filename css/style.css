@@ -250,6 +250,11 @@ button {
   background-color: inherit;
 }
 
+.counter__plus-btn,
+.counter__minus-btn {
+  padding: 13px;
+}
+
 .counter__minus-icon,
 .counter__plus-icon {
   width: 30px;
@@ -271,7 +276,7 @@ button {
 
 .total-price-val {
   position: absolute;
-  right: 90px;
+  right: 65px;
 }
 
 .shopping-basket__to-buy-button {
@@ -1101,8 +1106,8 @@ button {
     top: 0px;
     transform: translateX(0);
     background-color: var(--light-brown-color);
-    transform: 400ms;
     transition: transform 400ms, opacity 400ms;
+    min-width: 110px;
   }
 
   .header-menu__nav a:hover {
@@ -1112,6 +1117,12 @@ button {
   .header-menu__list {
     flex-direction: column;
     max-width: 250px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    padding-right: 100px;
+    position: absolute;
+    right: 0;
+    padding-right: 100px;
   }
 
   /* Shopping Bag */
@@ -1232,7 +1243,7 @@ button {
 
   #total-price-val {
     position: absolute;
-    right: 90px;
+    right: 40px;
   }
 
 }
@@ -1240,5 +1251,15 @@ button {
 @media screen and (max-width: 400px) {
   .feedback__mail-photo {
     height: 245px;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .counter__total-price{
+    padding: 0;
+  }
+
+  .shopping-basket__to-buy-button {
+    margin: 0;
   }
 }
