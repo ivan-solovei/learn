@@ -205,6 +205,6 @@ const CalculateSaeparateItem = (counter, action) => {
   }
 
   document.querySelector('.total-price-val').textContent = getItemSubTotalPrice(input);
-};
-
   calculateTotalPrice();
+
+};
